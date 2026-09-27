@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Luckiest Dog on the Porch — Jacob Westbrook</title>
-  <meta name="description" content="A memoir of 1950s Detroit, Air Force aviation, Vietnam, and coming home. Kindle Countdown $0.99 Sep 29–Oct 4. Free Chapter 1 on YouTube.">
-  <meta property="og:title" content="The Luckiest Dog on the Porch — Jacob Westbrook">
-  <meta property="og:description" content="Detroit childhood. Air Force. Vietnam. Coming home. Kindle Countdown $0.99 Sep 29–Oct 4. Watch free Chapter 1.">
+  <title>Why Buy The Luckiest Dog on the Porch — Jacob Westbrook</title>
+  <meta name="description" content="True adult memoir: Detroit roots, Vietnam-era Air Force, creative rebuild, and the quiet luck of a porch with a dog. Free Chapter 1 on YouTube. Kindle Countdown $0.99 Sep 29–Oct 4.">
+  <meta property="og:title" content="Why Buy The Luckiest Dog on the Porch — Jacob Westbrook">
+  <meta property="og:description" content="Three years of writing. War, homecoming, ordinary grace. Free Chapter 1 on YouTube. Kindle $0.99 Sep 29–Oct 4.">
   <meta property="og:type" content="book">
   <meta property="og:image" content="cover.jpg">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Luckiest Dog on the Porch">
-  <meta name="twitter:description" content="Memoir by Jacob Westbrook. Kindle $0.99 Sep 29–Oct 4. Free Chapter 1 on YouTube.">
+  <meta name="twitter:title" content="The Luckiest Dog on the Porch — reasons to buy">
+  <meta name="twitter:description" content="Adult memoir by Jacob Westbrook. Free Ch. 1 on YouTube. Kindle Countdown $0.99 Sep 29–Oct 4.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,6 @@
       --accent-dark: #6b3410;
       --sky: #2c4a6e;
       --sky-dark: #1e3550;
-      --gold: #c4a35a;
       --muted: #5c534a;
       --line: #e6dcc8;
     }
@@ -41,7 +40,7 @@
     .wrap {
       max-width: 920px;
       margin: 0 auto;
-      padding: 2.5rem 1.25rem 3.5rem;
+      padding: 2.25rem 1.25rem 3.25rem;
     }
     .badge {
       display: inline-block;
@@ -53,13 +52,13 @@
       font-size: 0.85rem;
       font-weight: 700;
       letter-spacing: 0.02em;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.15rem;
     }
     .hero {
       display: grid;
       grid-template-columns: 220px 1fr;
       gap: 2rem;
-      align-items: center;
+      align-items: start;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -76,29 +75,54 @@
     }
     h1 {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(2rem, 4.5vw, 2.85rem);
-      line-height: 1.12;
+      font-size: clamp(1.85rem, 4.2vw, 2.65rem);
+      line-height: 1.15;
       font-weight: 700;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.4rem;
     }
     .byline {
       color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
+      font-size: 1.02rem;
+      margin-bottom: 0.85rem;
     }
     .byline strong { color: var(--ink); }
-    .blurb {
+    .lede {
       font-size: 1.08rem;
       color: #3a342e;
       max-width: 38rem;
-      margin-bottom: 1.35rem;
+      margin-bottom: 1.1rem;
     }
+    .reasons {
+      list-style: none;
+      margin: 0 0 1.25rem;
+      padding: 0;
+    }
+    .reasons li {
+      position: relative;
+      padding: 0.45rem 0 0.45rem 1.35rem;
+      font-size: 1.01rem;
+      color: #3a342e;
+      border-bottom: 1px solid var(--line);
+    }
+    .reasons li:last-child { border-bottom: none; }
+    .reasons li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: var(--gold, #c4a35a);
+      background: #c4a35a;
+    }
+    .reasons strong { color: var(--ink); font-weight: 700; }
     .deal {
       background: linear-gradient(135deg, #fff8e8, #f3e6c4);
       border: 1px solid #e4cfa0;
       border-radius: 12px;
       padding: 0.85rem 1rem;
-      margin-bottom: 1.35rem;
+      margin-bottom: 1.25rem;
       font-size: 0.98rem;
     }
     .deal strong { color: #6b4b10; }
@@ -132,27 +156,26 @@
       box-shadow: 0 8px 18px rgba(44, 74, 110, 0.28);
     }
     .btn-yt:hover { background: var(--sky-dark); }
-    .story {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.9rem;
-    }
-    .card {
-      background: rgba(255,253,248,0.85);
+    .audience {
+      margin-top: 1.75rem;
+      background: rgba(255,253,248,0.9);
       border: 1px solid var(--line);
       border-radius: 14px;
-      padding: 1rem 1.05rem;
+      padding: 1.15rem 1.25rem;
     }
-    .card h2 {
+    .audience h2 {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.25rem;
-      margin-bottom: 0.35rem;
+      font-size: 1.4rem;
       color: var(--sky);
+      margin-bottom: 0.4rem;
     }
-    .card p { font-size: 0.95rem; color: var(--muted); }
+    .audience p {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 42rem;
+    }
     footer {
-      margin-top: 2.25rem;
+      margin-top: 2rem;
       text-align: center;
       color: var(--muted);
       font-size: 0.9rem;
@@ -160,51 +183,49 @@
     footer a { color: var(--sky); }
     @media (max-width: 740px) {
       .hero { grid-template-columns: 1fr; text-align: center; }
-      .blurb { margin-left: auto; margin-right: auto; }
+      .lede, .reasons { margin-left: auto; margin-right: auto; text-align: left; max-width: 38rem; }
       .ctas { justify-content: center; }
-      .story { grid-template-columns: 1fr; }
       .deal { text-align: left; }
+      .audience { text-align: left; }
     }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <div class="badge">Kindle Countdown · $0.99 · Sep 29–Oct 4</div>
+    <div class="badge">Kindle Countdown · $0.99 · Sep 29–Oct 4, 2026</div>
     <section class="hero">
       <img class="cover" src="cover.jpg" width="220" height="315" alt="Cover of The Luckiest Dog on the Porch by Jacob Westbrook">
       <div>
-        <h1>The Luckiest Dog on the Porch</h1>
-        <p class="byline">A memoir by <strong>Jacob Westbrook</strong> <span aria-hidden="true">·</span> pen name</p>
-        <p class="blurb">
-          From 1950s Detroit and a life in music and theater, to Air Force training and
-          combat missions over Vietnam, then the long work of coming home—this is a candid
-          story about preparation meeting opportunity, courage chosen under pressure, and
-          the quiet luck that waits on a porch.
+        <h1>Why buy <em>The Luckiest Dog on the Porch</em></h1>
+        <p class="byline">A true adult memoir by <strong>Jacob Westbrook</strong> <span aria-hidden="true">·</span> pen name of a Vietnam-era Air Force life</p>
+        <p class="lede">
+          After war and the long rebuild that followed, luck finally sits still—on a porch, with a dog.
+          Three years of writing went into this candid homecoming story: Detroit roots, Air Force skies, and ordinary grace.
         </p>
+        <ul class="reasons">
+          <li><strong>Real adult memoir</strong> — not YA. War, homecoming, and the quiet work of becoming whole again.</li>
+          <li><strong>Detroit to Vietnam and back</strong> — Midwest beginnings, Air Force service, then a creative life rebuilt.</li>
+          <li><strong>Three years on the page</strong> — a lived voice, not a rushed outline or status update.</li>
+          <li><strong>Taste the voice free</strong> — Chapter 1 is on YouTube before you spend a dollar.</li>
+          <li><strong>$0.99 this week only</strong> — Kindle Countdown Sep 29–Oct 4 (regularly about $9.99); paperback also on Amazon.</li>
+        </ul>
         <div class="deal">
-          <strong>Limited Kindle Countdown:</strong> $0.99 from September 29 through October 4
-          (regularly $9.99). Start free with Chapter 1 on YouTube, then grab the full memoir on Amazon.
+          <strong>Limited Kindle Countdown:</strong> $0.99 from September 29 through October 4, 2026
+          (regularly ~$9.99). Watch free Chapter 1, then buy the full memoir on Amazon.
         </div>
         <div class="ctas">
           <a class="btn btn-amazon" href="https://www.amazon.com/dp/B0F36LGDKG" rel="noopener" target="_blank">Buy on Amazon</a>
-          <a class="btn btn-yt" href="https://youtu.be/0H0I9owW_vw" rel="noopener" target="_blank">Watch free Chapter 1</a>
+          <a class="btn btn-yt" href="https://youtu.be/0H0I9owW_vw" rel="noopener" target="_blank">Free Chapter 1 on YouTube</a>
         </div>
       </div>
     </section>
 
-    <section class="story" aria-label="Story highlights">
-      <article class="card">
-        <h2>Detroit beginnings</h2>
-        <p>A childhood shaped by music, theater, and the early lessons that make a life ready for risk.</p>
-      </article>
-      <article class="card">
-        <h2>Air Force &amp; Vietnam</h2>
-        <p>Training, responsibility, and combat missions—then the harder mission of returning to ordinary days.</p>
-      </article>
-      <article class="card">
-        <h2>Porch luck</h2>
-        <p>Reinvention after war: education, creativity, gratitude, and the encounters that still feel like luck.</p>
-      </article>
+    <section class="audience" aria-label="Who this book is for">
+      <h2>Who it’s for</h2>
+      <p>
+        Veterans and families of veterans; Detroit and Midwest readers; memoir lovers who want war + homecoming + ordinary grace—
+        not a young-adult adventure, but an adult life told with care.
+      </p>
     </section>
 
     <footer>
