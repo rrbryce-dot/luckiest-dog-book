@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Luckiest Dog on the Porch — Jacob Westbrook</title>
+  <meta name="description" content="A memoir of 1950s Detroit, Air Force aviation, Vietnam, and coming home. Kindle Countdown $0.99 Sep 29–Oct 4. Free Chapter 1 on YouTube.">
+  <meta property="og:title" content="The Luckiest Dog on the Porch — Jacob Westbrook">
+  <meta property="og:description" content="Detroit childhood. Air Force. Vietnam. Coming home. Kindle Countdown $0.99 Sep 29–Oct 4. Watch free Chapter 1.">
+  <meta property="og:type" content="book">
+  <meta property="og:image" content="cover.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Luckiest Dog on the Porch">
+  <meta name="twitter:description" content="Memoir by Jacob Westbrook. Kindle $0.99 Sep 29–Oct 4. Free Chapter 1 on YouTube.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1c1917;
+      --paper: #f7f1e8;
+      --card: #fffdf8;
+      --accent: #8b4513;
+      --accent-dark: #6b3410;
+      --sky: #2c4a6e;
+      --sky-dark: #1e3550;
+      --gold: #c4a35a;
+      --muted: #5c534a;
+      --line: #e6dcc8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      background:
+        radial-gradient(ellipse at top, #efe6d6 0%, var(--paper) 55%),
+        var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3.5rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #fff6df;
+      color: #7a5a12;
+      border: 1px solid #e8d39a;
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.25rem;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2rem;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.75rem;
+      box-shadow: 0 18px 40px rgba(60, 40, 10, 0.08);
+    }
+    .cover {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 8px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+      display: block;
+      margin: 0 auto;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2rem, 4.5vw, 2.85rem);
+      line-height: 1.12;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+    .byline {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+    .byline strong { color: var(--ink); }
+    .blurb {
+      font-size: 1.08rem;
+      color: #3a342e;
+      max-width: 38rem;
+      margin-bottom: 1.35rem;
+    }
+    .deal {
+      background: linear-gradient(135deg, #fff8e8, #f3e6c4);
+      border: 1px solid #e4cfa0;
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      margin-bottom: 1.35rem;
+      font-size: 0.98rem;
+    }
+    .deal strong { color: #6b4b10; }
+    .ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.02rem;
+      border-radius: 999px;
+      padding: 0.9rem 1.35rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-amazon {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(139, 69, 19, 0.28);
+    }
+    .btn-amazon:hover { background: var(--accent-dark); }
+    .btn-yt {
+      background: var(--sky);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(44, 74, 110, 0.28);
+    }
+    .btn-yt:hover { background: var(--sky-dark); }
+    .story {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+    }
+    .card {
+      background: rgba(255,253,248,0.85);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem 1.05rem;
+    }
+    .card h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.25rem;
+      margin-bottom: 0.35rem;
+      color: var(--sky);
+    }
+    .card p { font-size: 0.95rem; color: var(--muted); }
+    footer {
+      margin-top: 2.25rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer a { color: var(--sky); }
+    @media (max-width: 740px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .blurb { margin-left: auto; margin-right: auto; }
+      .ctas { justify-content: center; }
+      .story { grid-template-columns: 1fr; }
+      .deal { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="badge">Kindle Countdown · $0.99 · Sep 29–Oct 4</div>
+    <section class="hero">
+      <img class="cover" src="cover.jpg" width="220" height="315" alt="Cover of The Luckiest Dog on the Porch by Jacob Westbrook">
+      <div>
+        <h1>The Luckiest Dog on the Porch</h1>
+        <p class="byline">A memoir by <strong>Jacob Westbrook</strong> <span aria-hidden="true">·</span> pen name</p>
+        <p class="blurb">
+          From 1950s Detroit and a life in music and theater, to Air Force training and
+          combat missions over Vietnam, then the long work of coming home—this is a candid
+          story about preparation meeting opportunity, courage chosen under pressure, and
+          the quiet luck that waits on a porch.
+        </p>
+        <div class="deal">
+          <strong>Limited Kindle Countdown:</strong> $0.99 from September 29 through October 4
+          (regularly $9.99). Start free with Chapter 1 on YouTube, then grab the full memoir on Amazon.
+        </div>
+        <div class="ctas">
+          <a class="btn btn-amazon" href="https://www.amazon.com/dp/B0F36LGDKG" rel="noopener" target="_blank">Buy on Amazon</a>
+          <a class="btn btn-yt" href="https://youtu.be/0H0I9owW_vw" rel="noopener" target="_blank">Watch free Chapter 1</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" aria-label="Story highlights">
+      <article class="card">
+        <h2>Detroit beginnings</h2>
+        <p>A childhood shaped by music, theater, and the early lessons that make a life ready for risk.</p>
+      </article>
+      <article class="card">
+        <h2>Air Force &amp; Vietnam</h2>
+        <p>Training, responsibility, and combat missions—then the harder mission of returning to ordinary days.</p>
+      </article>
+      <article class="card">
+        <h2>Porch luck</h2>
+        <p>Reinvention after war: education, creativity, gratitude, and the encounters that still feel like luck.</p>
+      </article>
+    </section>
+
+    <footer>
+      <p>
+        <em>The Luckiest Dog on the Porch</em> by Jacob Westbrook
+        · ASIN <a href="https://www.amazon.com/dp/B0F36LGDKG" rel="noopener" target="_blank">B0F36LGDKG</a>
+        · Free Chapter 1 on
+        <a href="https://youtu.be/0H0I9owW_vw" rel="noopener" target="_blank">YouTube</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
