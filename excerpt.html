@@ -36,7 +36,21 @@
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; margin-bottom: 0.35rem;
     }
-    .byline { color: var(--muted); margin-bottom: 1.25rem; font-size: 1.02rem; }
+    .byline { color: var(--muted); margin-bottom: 1rem; font-size: 1.02rem; }
+    .buy-now { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0 0 1.35rem; }
+    .btn {
+      display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+      text-decoration: none; font-weight: 700; font-size: 1.05rem; line-height: 1.2;
+      border-radius: 999px; padding: 0.85rem 1.35rem; border: 2px solid transparent;
+      min-width: 12rem; text-align: center; box-shadow: 0 6px 16px rgba(60,40,10,0.12);
+    }
+    .btn-sub { display:block; font-size:0.78rem; font-weight:600; opacity:0.92; margin-top:0.2rem; }
+    .btn-paperback { background: var(--accent); color: #fff; }
+    .btn-paperback:hover { background: var(--accent-dark); }
+    .btn-kindle { background: var(--kindle); color: #fff; }
+    .btn-kindle:hover { background: var(--kindle-dark); }
+    .btn-yt { background: var(--sky); color: #fff; }
+    .btn-yt:hover { background: var(--sky-dark); }
     .sample {
       background: var(--card); border: 1px solid var(--line); border-radius: 16px;
       padding: 1.5rem 1.35rem; box-shadow: 0 12px 28px rgba(60,40,10,0.07);
@@ -47,25 +61,39 @@
     }
     .sample p { margin: 0 0 1.05rem; font-size: 1.08rem; }
     .sample p:last-child { margin-bottom: 0; }
-    .note {
-      margin: 1.25rem 0 0; color: var(--muted); font-size: 0.95rem;
+    .cta-mid {
+      margin: 1.5rem 0 0; padding: 1.15rem 1.05rem; border-radius: 14px;
+      border: 1px solid #e4cfa0; background: linear-gradient(135deg, #fff8e8, #f3e6c4);
     }
-    .ctas {
-      display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem;
-    }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      text-decoration: none; font-weight: 700; font-size: 1.02rem;
-      border-radius: 999px; padding: 0.9rem 1.35rem; border: 2px solid transparent;
-    }
-    .btn-paperback { background: var(--accent); color: #fff; }
-    .btn-paperback:hover { background: var(--accent-dark); }
-    .btn-kindle { background: var(--kindle); color: #fff; }
-    .btn-kindle:hover { background: var(--kindle-dark); }
-    .btn-yt { background: var(--sky); color: #fff; }
-    .btn-yt:hover { background: var(--sky-dark); }
-    footer { margin-top: 2rem; font-size: 0.92rem; color: var(--muted); }
+    .cta-mid p { margin: 0 0 0.9rem; font-weight: 700; color: #6b4b10; font-size: 1.05rem; }
+    .note { margin: 1.1rem 0 0; color: var(--muted); font-size: 0.95rem; }
+    footer { margin-top: 2rem; font-size: 0.92rem; color: var(--muted); padding-bottom: 5.75rem; }
     footer a { color: var(--sky); }
+    .sticky-buy {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+      background: rgba(28,25,23,0.96); color: #fff;
+      padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
+      box-shadow: 0 -8px 24px rgba(0,0,0,0.25);
+    }
+    .sticky-inner {
+      max-width: 720px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; gap: 0.55rem; align-items: center; justify-content: space-between;
+    }
+    .sticky-copy { font-size: 0.9rem; font-weight: 600; color: #f7f1e8; flex: 1 1 160px; }
+    .sticky-copy span { color: #ffd48a; }
+    .sticky-btns { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .sticky-btns a {
+      display: inline-flex; align-items: center; justify-content: center;
+      text-decoration: none; font-weight: 700; font-size: 0.95rem;
+      border-radius: 999px; padding: 0.7rem 1.15rem; color: #fff;
+    }
+    .sticky-btns .s-pb { background: #c45c1a; }
+    .sticky-btns .s-kd { background: #5a4a38; }
+    .sticky-btns a:hover { filter: brightness(1.08); }
+    @media (max-width: 560px) {
+      .btn { width: 100%; min-width: 0; }
+      .sticky-copy { font-size: 0.82rem; }
+    }
   </style>
 </head>
 <body>
@@ -74,30 +102,54 @@
     <div class="badge">Free text sample · then buy on Amazon</div>
     <h1>Free excerpt</h1>
     <p class="byline"><em>The Luckiest Dog on the Porch</em> · Jacob Westbrook · adult memoir (not YA)</p>
+
+    <div class="buy-now" aria-label="Buy the book">
+      <a class="btn btn-paperback" href="https://www.amazon.com/dp/B0F36LGDKG" rel="noopener" target="_blank">Buy paperback on Amazon<span class="btn-sub">Full memoir · ship tonight</span></a>
+      <a class="btn btn-kindle" href="https://www.amazon.com/dp/B0D2CSKYWV" rel="noopener" target="_blank">Buy Kindle on Amazon<span class="btn-sub">$0.99 Tue Sep 29–Oct 3</span></a>
+      <a class="btn btn-yt" href="https://youtu.be/0H0I9owW_vw" rel="noopener" target="_blank">Hear Chapter 1 free<span class="btn-sub">YouTube narration</span></a>
+    </div>
+
     <article class="sample">
       <h2>Chapter 1: Introduction</h2>
-      <p>I’ve always been told I was lucky, but as I grew older, I began to question what luck really meant. Was it those chance encounters, like meeting Mr. Henderson, or was it something more? My father had this saying he’d repeat whenever any of us succeeded at something: ‘Luck is what happens when preparation meets opportunity, and every encounter is an opportunity.’ He’d lean back in his chair, quoting Seneca for the first half with a nod, then add his own piece, his voice steady and sure. ‘It’s not just about waiting for the big breaks, Jake,’ he’d say. ‘Every person you meet, every moment you’re in—it’s a chance to learn something, to build something, to shift your path. But you’ve got to be ready, eyes open, heart willing, or it’ll pass you by like a stranger on the street.’</p>
+<p>I’ve always been told I was lucky, but as I grew older, I began to question what luck really meant. Was it those chance encounters, like meeting Mr. Henderson, or was it something more? My father had this saying he’d repeat whenever any of us succeeded at something: ‘Luck is what happens when preparation meets opportunity, and every encounter is an opportunity.’ He’d lean back in his chair, quoting Seneca for the first half with a nod, then add his own piece, his voice steady and sure. ‘It’s not just about waiting for the big breaks, Jake,’ he’d say. ‘Every person you meet, every moment you’re in—it’s a chance to learn something, to build something, to shift your path. But you’ve got to be ready, eyes open, heart willing, or it’ll pass you by like a stranger on the street.’</p>
       <p>Dad’s addition to that old Seneca quote—‘every encounter is an opportunity’—wasn’t just a tagline; it was a way of seeing the world he pressed into us like a fingerprint on clay. He meant life’s a wild, winding mess of people and moments, and every single one carries the power to shift you somewhere new. A neighbor’s casual wave, a stranger’s offhand remark, even a fleeting glance from someone you’ll never meet again—they’re all chances to learn, connect, or veer off into uncharted territory if you’ve got the grit to grab them. He’d compare it to that Asian game Plinko, where you drop a disc down a board studded with pegs—each peg it hits can bounce it left, right, or straight down, changing its course in ways you can’t predict. ‘It’s not just where you start, Jake,’ he’d say, ‘it’s every peg along the way—every one’s got the power to turn you.’ Luck, to him, wasn’t some random gift; it was what you built from those bounces when you’d prepped yourself to meet them head-on.</p>
       <p>To me, growing up with that voice in my ear, it turned into a quiet faith—every face, every word, was a peg on my own Plinko board, ready to nudge my path if I was set to roll with it. That’s why a record producer’s invite to his aviary wasn’t just dumb luck—it was a peg I’d tuned my guitar to hit, sending me spinning toward music I’d never dreamed of; why a girl with a script didn’t just sit down, but knocked me toward a stage I’d been prepping for in the dark. Dad’s lesson was clear: life’s full of these pegs—some loud and obvious, some so small you barely notice—and every encounter’s an opportunity to change your course, to grow, to turn a quick ‘hey’ into a whole new direction. In Plinko, you drop the disc with care, but it’s every peg it strikes that decides where you land; in life, he taught me, you ready yourself so each bounce takes you somewhere worth going. That’s the pulse of this story: not sitting back for fate to call the shots, but meeting every peg, every encounter, with the will to make it mine.</p>
       <p>I played my guitar almost every day, not because I was made to, but because there was nothing I loved more than crafting melodies. Olivia was always buried in her books, her ambition for medicine driving her to study relentlessly, while Sophia turned our house into an art studio, painting and designing until the early hours. Even Mom, with her flair for cooking, would experiment with recipes, turning our kitchen into a laboratory of flavors. When my song ended up on the radio or when I decided to join the Air Force, or when Olivia got accepted into Cornell’s pre-med program, or when Sophia won her first art competition, we realized what Dad meant. Those weren’t just strokes of luck; they were moments where our passion and dedication collided with opportunities we couldn’t have anticipated—pegs we’d hit because we’d aimed ourselves right. His mantra shaped all our lives, teaching us that what others might call luck, we saw as the result of countless hours of our own doing. We were prepared, not because we had to be, but because we wanted to be.</p>
       <p>This book is about how I earned my nickname, &quot;The Luckiest Dog on the Porch,&quot; a title that’s followed me my entire life. It started with small things, seemingly insignificant moments that, in retrospect, feel like strokes of incredible fortune. A chance encounter with a neighbor who became a lifelong mentor. My acceptance to an Ivy League university, facilitated by family connections and a network of supportive friends. These were the building blocks of a reputation, a perception of effortless success. Except for a few occasions, I always passed the idea baton off to someone else to carry out the actual execution. Not this time. These are my words, my recollections, my history, unfiltered. No editor, no ghostwriter, zero revisions based on others’ input. It would likely be better and easier to read if someone else had written it, but this is my story. There are parts that could have been less wordy, and it could have been much longer, too. I hope you enjoy reading it as much as I enjoyed living—and now, memorializing—my life.</p>
       <p>But there were also moments of genuine hard work, of calculated risks, of preparation meeting opportunities precisely as my father described—pegs I’d bounced off because I’d dropped the disc with care. And there were times when things went less than hoped for, when the narrative took unexpected turns, when the line between luck and skill blurred. This book explores all of that. This isn’t just the story of one event, or even a series of fortunate events. It’s the story of a life lived, a life shaped by both genuine luck—not stupid luck—by moments of extraordinary fortune and less than fortunate outcomes. It’s a story that stretches far beyond any single headline or snapshot. It’s the story of how I became &quot;The Luckiest Dog on the Porch,&quot; a story that began long ago, and continues to unfold. It’s a story I’m finally ready to tell.</p>
+    
     </article>
-    <p class="note">
-      Liked the opening? Buy the full book tonight — or hear Chapter 1 narrated on YouTube.
-      Kindle Countdown $0.99 starts <strong>Tue Sep 29, 8:00 a.m. Pacific</strong> through Oct 3 (paperback stays at list).
-    </p>
-    <div class="ctas">
-      <a class="btn btn-paperback" href="https://www.amazon.com/dp/B0F36LGDKG" rel="noopener" target="_blank">Buy paperback now</a>
-      <a class="btn btn-kindle" href="https://www.amazon.com/dp/B0D2CSKYWV" rel="noopener" target="_blank">Buy Kindle now</a>
-      <a class="btn btn-yt" href="https://youtu.be/0H0I9owW_vw" rel="noopener" target="_blank">Hear Chapter 1 on YouTube</a>
+
+    <div class="cta-mid">
+      <p>Finished the sample? Get the full book on Amazon now.</p>
+      <div class="buy-now" style="margin:0">
+        <a class="btn btn-paperback" href="https://www.amazon.com/dp/B0F36LGDKG" rel="noopener" target="_blank">Buy paperback now<span class="btn-sub">Amazon · B0F36LGDKG</span></a>
+        <a class="btn btn-kindle" href="https://www.amazon.com/dp/B0D2CSKYWV" rel="noopener" target="_blank">Buy Kindle now<span class="btn-sub">Countdown $0.99 starts Tue</span></a>
+      </div>
     </div>
+
+    <p class="note">
+      Kindle Countdown <strong>$0.99</strong> starts <strong>Tue Sep 29, 8:00 a.m. Pacific</strong> through Oct 3 (paperback stays at list).
+      Adult memoir — not a YA / children’s book.
+    </p>
+
     <footer>
       <p>Sample published for readers · © Jacob Westbrook ·
         <a href="./">Landing</a> ·
-        <a href="https://www.amazon.com/dp/B0F36LGDKG" rel="noopener" target="_blank">Amazon</a>
+        <a href="https://www.amazon.com/dp/B0F36LGDKG" rel="noopener" target="_blank">Amazon paperback</a> ·
+        <a href="https://www.amazon.com/dp/B0D2CSKYWV" rel="noopener" target="_blank">Amazon Kindle</a>
       </p>
     </footer>
   </main>
+
+  <div class="sticky-buy" role="region" aria-label="Buy now">
+    <div class="sticky-inner">
+      <div class="sticky-copy">Ready for the rest? <span>Buy on Amazon</span></div>
+      <div class="sticky-btns">
+        <a class="s-pb" href="https://www.amazon.com/dp/B0F36LGDKG" rel="noopener" target="_blank">Paperback</a>
+        <a class="s-kd" href="https://www.amazon.com/dp/B0D2CSKYWV" rel="noopener" target="_blank">Kindle</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
