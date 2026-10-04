@@ -6,8 +6,7 @@ Public landing page for Jacob Westbrook’s memoir.
 - **Paperback:** https://www.amazon.com/dp/B0F36LGDKG
 - **Kindle:** https://www.amazon.com/dp/B0D2CSKYWV
 - **Free Chapter 1:** https://youtu.be/0H0I9owW_vw
-- **Kindle Countdown:** $0.99 is live on Amazon.com through Sunday, Oct 4, 2026, 8:00 a.m. PDT. Digital list price is $9.99. The paperback is not included.
 
-The landing page leads with the live Kindle price, then paperback and free Chapter 1.
+The landing page asks visitors to get the Kindle or paperback on Amazon, then offers a free Chapter 1 sample. It does not state a price.
 
-Static GitHub Pages site. Edit `index.html` and push to `main`.
+Static GitHub Pages site. Edit `index.html` and `excerpt.html`, then push to `main`.
